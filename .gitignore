@@ -2,3 +2,8 @@
 .env
 .env.local
 .env.production
+
+# Credentials
+credentials.json
+credentials.local.json
+credentials.production.json
