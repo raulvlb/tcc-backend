@@ -1,154 +1,143 @@
 {
   "166-dHy9M4NuZmJDaSzZ0BoPg4-fEpPJV": {
-    "gemini_store_name": "fileSearchStores/tcnicas-de-anlise-de-dados-fjn89ztoo06f",
-    "store_display_name": "T\u00e9cnicas de An\u00e1lise de Dados",
+    "store_name": "T\u00e9cnicas de An\u00e1lise de Dados",
     "files": [
       {
-        "id": "139R7-W0IiKwXJ0zyiJUcmwSU_n24OZy3",
         "name": "MODULO 08.pdf",
-        "mimeType": "application/pdf",
-        "webViewLink": "https://drive.google.com/file/d/139R7-W0IiKwXJ0zyiJUcmwSU_n24OZy3/view?usp=drivesdk",
-        "webContentLink": "https://drive.google.com/uc?id=139R7-W0IiKwXJ0zyiJUcmwSU_n24OZy3&export=download"
+        "mime": "application/pdf",
+        "drive_id": "139R7-W0IiKwXJ0zyiJUcmwSU_n24OZy3",
+        "link": "https://drive.google.com/file/d/139R7-W0IiKwXJ0zyiJUcmwSU_n24OZy3/view?usp=drivesdk"
       },
       {
-        "id": "1DmZ0FS5WNY17RZDOyoBSv5mq0brkE93U",
         "name": "Conte\u00fado 8 _ AVA - Acad\u00eamico.pdf",
-        "mimeType": "application/pdf",
-        "webViewLink": "https://drive.google.com/file/d/1DmZ0FS5WNY17RZDOyoBSv5mq0brkE93U/view?usp=drivesdk",
-        "webContentLink": "https://drive.google.com/uc?id=1DmZ0FS5WNY17RZDOyoBSv5mq0brkE93U&export=download"
+        "mime": "application/pdf",
+        "drive_id": "1DmZ0FS5WNY17RZDOyoBSv5mq0brkE93U",
+        "link": "https://drive.google.com/file/d/1DmZ0FS5WNY17RZDOyoBSv5mq0brkE93U/view?usp=drivesdk"
       },
       {
-        "id": "1_U8t5oSNXQpoYWz8YIZ2eFYmSWajbk84",
         "name": "MODULO 07.pdf",
-        "mimeType": "application/pdf",
-        "webViewLink": "https://drive.google.com/file/d/1_U8t5oSNXQpoYWz8YIZ2eFYmSWajbk84/view?usp=drivesdk",
-        "webContentLink": "https://drive.google.com/uc?id=1_U8t5oSNXQpoYWz8YIZ2eFYmSWajbk84&export=download"
+        "mime": "application/pdf",
+        "drive_id": "1_U8t5oSNXQpoYWz8YIZ2eFYmSWajbk84",
+        "link": "https://drive.google.com/file/d/1_U8t5oSNXQpoYWz8YIZ2eFYmSWajbk84/view?usp=drivesdk"
       },
       {
-        "id": "1jApPkXAjNWDF4JU8Q-iGA3wHXE7NmOsV",
         "name": "Conte\u00fado 7 _ AVA - Acad\u00eamico.pdf",
-        "mimeType": "application/pdf",
-        "webViewLink": "https://drive.google.com/file/d/1jApPkXAjNWDF4JU8Q-iGA3wHXE7NmOsV/view?usp=drivesdk",
-        "webContentLink": "https://drive.google.com/uc?id=1jApPkXAjNWDF4JU8Q-iGA3wHXE7NmOsV&export=download"
+        "mime": "application/pdf",
+        "drive_id": "1jApPkXAjNWDF4JU8Q-iGA3wHXE7NmOsV",
+        "link": "https://drive.google.com/file/d/1jApPkXAjNWDF4JU8Q-iGA3wHXE7NmOsV/view?usp=drivesdk"
       },
       {
-        "id": "1veDTl0WO9UNuUbJpX9rySbws-dswGgTg",
         "name": "MODULO 06.pdf",
-        "mimeType": "application/pdf",
-        "webViewLink": "https://drive.google.com/file/d/1veDTl0WO9UNuUbJpX9rySbws-dswGgTg/view?usp=drivesdk",
-        "webContentLink": "https://drive.google.com/uc?id=1veDTl0WO9UNuUbJpX9rySbws-dswGgTg&export=download"
+        "mime": "application/pdf",
+        "drive_id": "1veDTl0WO9UNuUbJpX9rySbws-dswGgTg",
+        "link": "https://drive.google.com/file/d/1veDTl0WO9UNuUbJpX9rySbws-dswGgTg/view?usp=drivesdk"
       },
       {
-        "id": "1gDqbhSL8Sgu6JpUrM4x2zfZq_1v_aeyK",
         "name": "Conte\u00fado 6 _ AVA - Acad\u00eamico.pdf",
-        "mimeType": "application/pdf",
-        "webViewLink": "https://drive.google.com/file/d/1gDqbhSL8Sgu6JpUrM4x2zfZq_1v_aeyK/view?usp=drivesdk",
-        "webContentLink": "https://drive.google.com/uc?id=1gDqbhSL8Sgu6JpUrM4x2zfZq_1v_aeyK&export=download"
+        "mime": "application/pdf",
+        "drive_id": "1gDqbhSL8Sgu6JpUrM4x2zfZq_1v_aeyK",
+        "link": "https://drive.google.com/file/d/1gDqbhSL8Sgu6JpUrM4x2zfZq_1v_aeyK/view?usp=drivesdk"
       },
       {
-        "id": "1zkiENKnaSWw3M-LGGUd-HMy60SZJdYd_",
         "name": "MODULO 05.pdf",
-        "mimeType": "application/pdf",
-        "webViewLink": "https://drive.google.com/file/d/1zkiENKnaSWw3M-LGGUd-HMy60SZJdYd_/view?usp=drivesdk",
-        "webContentLink": "https://drive.google.com/uc?id=1zkiENKnaSWw3M-LGGUd-HMy60SZJdYd_&export=download"
+        "mime": "application/pdf",
+        "drive_id": "1zkiENKnaSWw3M-LGGUd-HMy60SZJdYd_",
+        "link": "https://drive.google.com/file/d/1zkiENKnaSWw3M-LGGUd-HMy60SZJdYd_/view?usp=drivesdk"
       },
       {
-        "id": "1u4CVskhr_bdRQjo2Q3O1IxJypdA5GXsM",
         "name": "Conte\u00fado 5 _ AVA - Acad\u00eamico.pdf",
-        "mimeType": "application/pdf",
-        "webViewLink": "https://drive.google.com/file/d/1u4CVskhr_bdRQjo2Q3O1IxJypdA5GXsM/view?usp=drivesdk",
-        "webContentLink": "https://drive.google.com/uc?id=1u4CVskhr_bdRQjo2Q3O1IxJypdA5GXsM&export=download"
+        "mime": "application/pdf",
+        "drive_id": "1u4CVskhr_bdRQjo2Q3O1IxJypdA5GXsM",
+        "link": "https://drive.google.com/file/d/1u4CVskhr_bdRQjo2Q3O1IxJypdA5GXsM/view?usp=drivesdk"
       },
       {
-        "id": "1HFqPURDvz_rLoAWFbhXtFp4ekjOczWYu",
         "name": "MODULO 04.pdf",
-        "mimeType": "application/pdf",
-        "webViewLink": "https://drive.google.com/file/d/1HFqPURDvz_rLoAWFbhXtFp4ekjOczWYu/view?usp=drivesdk",
-        "webContentLink": "https://drive.google.com/uc?id=1HFqPURDvz_rLoAWFbhXtFp4ekjOczWYu&export=download"
+        "mime": "application/pdf",
+        "drive_id": "1HFqPURDvz_rLoAWFbhXtFp4ekjOczWYu",
+        "link": "https://drive.google.com/file/d/1HFqPURDvz_rLoAWFbhXtFp4ekjOczWYu/view?usp=drivesdk"
       },
       {
-        "id": "1BlworjsGPNN48D5VbVD5sTRmgbHna24j",
         "name": "Conte\u00fado 4 _ AVA - Acad\u00eamico.pdf",
-        "mimeType": "application/pdf",
-        "webViewLink": "https://drive.google.com/file/d/1BlworjsGPNN48D5VbVD5sTRmgbHna24j/view?usp=drivesdk",
-        "webContentLink": "https://drive.google.com/uc?id=1BlworjsGPNN48D5VbVD5sTRmgbHna24j&export=download"
+        "mime": "application/pdf",
+        "drive_id": "1BlworjsGPNN48D5VbVD5sTRmgbHna24j",
+        "link": "https://drive.google.com/file/d/1BlworjsGPNN48D5VbVD5sTRmgbHna24j/view?usp=drivesdk"
       },
       {
-        "id": "1tOcDO_0l5bONQVOFgbggsts0CeITBtFj",
         "name": "MODULO 03.pdf",
-        "mimeType": "application/pdf",
-        "webViewLink": "https://drive.google.com/file/d/1tOcDO_0l5bONQVOFgbggsts0CeITBtFj/view?usp=drivesdk",
-        "webContentLink": "https://drive.google.com/uc?id=1tOcDO_0l5bONQVOFgbggsts0CeITBtFj&export=download"
+        "mime": "application/pdf",
+        "drive_id": "1tOcDO_0l5bONQVOFgbggsts0CeITBtFj",
+        "link": "https://drive.google.com/file/d/1tOcDO_0l5bONQVOFgbggsts0CeITBtFj/view?usp=drivesdk"
       },
       {
-        "id": "1zgUzlDIwI9ozGKGWNlhZqp-_bDMtVcW-",
         "name": "Conte\u00fado 3 _ AVA - Acad\u00eamico.pdf",
-        "mimeType": "application/pdf",
-        "webViewLink": "https://drive.google.com/file/d/1zgUzlDIwI9ozGKGWNlhZqp-_bDMtVcW-/view?usp=drivesdk",
-        "webContentLink": "https://drive.google.com/uc?id=1zgUzlDIwI9ozGKGWNlhZqp-_bDMtVcW-&export=download"
+        "mime": "application/pdf",
+        "drive_id": "1zgUzlDIwI9ozGKGWNlhZqp-_bDMtVcW-",
+        "link": "https://drive.google.com/file/d/1zgUzlDIwI9ozGKGWNlhZqp-_bDMtVcW-/view?usp=drivesdk"
       },
       {
-        "id": "13WzPEQtQXBg4WXKvBqp_dpcNBEbh3gYk",
         "name": "MODULO 02.pdf",
-        "mimeType": "application/pdf",
-        "webViewLink": "https://drive.google.com/file/d/13WzPEQtQXBg4WXKvBqp_dpcNBEbh3gYk/view?usp=drivesdk",
-        "webContentLink": "https://drive.google.com/uc?id=13WzPEQtQXBg4WXKvBqp_dpcNBEbh3gYk&export=download"
+        "mime": "application/pdf",
+        "drive_id": "13WzPEQtQXBg4WXKvBqp_dpcNBEbh3gYk",
+        "link": "https://drive.google.com/file/d/13WzPEQtQXBg4WXKvBqp_dpcNBEbh3gYk/view?usp=drivesdk"
       },
       {
-        "id": "1V1tj7XEBmZmMa8Ie7ceEITBsG5IH5Czy",
         "name": "Conte\u00fado 2 _ AVA - Acad\u00eamico.pdf",
-        "mimeType": "application/pdf",
-        "webViewLink": "https://drive.google.com/file/d/1V1tj7XEBmZmMa8Ie7ceEITBsG5IH5Czy/view?usp=drivesdk",
-        "webContentLink": "https://drive.google.com/uc?id=1V1tj7XEBmZmMa8Ie7ceEITBsG5IH5Czy&export=download"
+        "mime": "application/pdf",
+        "drive_id": "1V1tj7XEBmZmMa8Ie7ceEITBsG5IH5Czy",
+        "link": "https://drive.google.com/file/d/1V1tj7XEBmZmMa8Ie7ceEITBsG5IH5Czy/view?usp=drivesdk"
       },
       {
-        "id": "1L8i_Pz67REfBNYSNvckBjPQn7ipOJTkf",
         "name": "MODULO 01.pdf",
-        "mimeType": "application/pdf",
-        "webViewLink": "https://drive.google.com/file/d/1L8i_Pz67REfBNYSNvckBjPQn7ipOJTkf/view?usp=drivesdk",
-        "webContentLink": "https://drive.google.com/uc?id=1L8i_Pz67REfBNYSNvckBjPQn7ipOJTkf&export=download"
+        "mime": "application/pdf",
+        "drive_id": "1L8i_Pz67REfBNYSNvckBjPQn7ipOJTkf",
+        "link": "https://drive.google.com/file/d/1L8i_Pz67REfBNYSNvckBjPQn7ipOJTkf/view?usp=drivesdk"
       },
       {
-        "id": "1rpteMsT0HO6Jos0Gjs46wrRujGwabdzv",
         "name": "Conte\u00fado 1 _ AVA - Acad\u00eamico.pdf",
-        "mimeType": "application/pdf",
-        "webViewLink": "https://drive.google.com/file/d/1rpteMsT0HO6Jos0Gjs46wrRujGwabdzv/view?usp=drivesdk",
-        "webContentLink": "https://drive.google.com/uc?id=1rpteMsT0HO6Jos0Gjs46wrRujGwabdzv&export=download"
+        "mime": "application/pdf",
+        "drive_id": "1rpteMsT0HO6Jos0Gjs46wrRujGwabdzv",
+        "link": "https://drive.google.com/file/d/1rpteMsT0HO6Jos0Gjs46wrRujGwabdzv/view?usp=drivesdk"
       },
       {
-        "id": "1qRQx5EuifC5uclI6gjYA6boC4AOhHZEy",
         "name": "Apresentacao analise de dados.pdf",
-        "mimeType": "application/pdf",
-        "webViewLink": "https://drive.google.com/file/d/1qRQx5EuifC5uclI6gjYA6boC4AOhHZEy/view?usp=drivesdk",
-        "webContentLink": "https://drive.google.com/uc?id=1qRQx5EuifC5uclI6gjYA6boC4AOhHZEy&export=download"
+        "mime": "application/pdf",
+        "drive_id": "1qRQx5EuifC5uclI6gjYA6boC4AOhHZEy",
+        "link": "https://drive.google.com/file/d/1qRQx5EuifC5uclI6gjYA6boC4AOhHZEy/view?usp=drivesdk"
       },
       {
-        "id": "1UfYZ0J_rzxcC-pi8qjkV7FUVN7PQR-TH",
         "name": "informacoes_sobre_foruns.pdf",
-        "mimeType": "application/pdf",
-        "webViewLink": "https://drive.google.com/file/d/1UfYZ0J_rzxcC-pi8qjkV7FUVN7PQR-TH/view?usp=drivesdk",
-        "webContentLink": "https://drive.google.com/uc?id=1UfYZ0J_rzxcC-pi8qjkV7FUVN7PQR-TH&export=download"
+        "mime": "application/pdf",
+        "drive_id": "1UfYZ0J_rzxcC-pi8qjkV7FUVN7PQR-TH",
+        "link": "https://drive.google.com/file/d/1UfYZ0J_rzxcC-pi8qjkV7FUVN7PQR-TH/view?usp=drivesdk"
       },
       {
-        "id": "1CIRH-X8ScLQs_RToZioQOLU6JkL-ZX6J",
         "name": "informacoes_sobre_avaliacoes.pdf",
-        "mimeType": "application/pdf",
-        "webViewLink": "https://drive.google.com/file/d/1CIRH-X8ScLQs_RToZioQOLU6JkL-ZX6J/view?usp=drivesdk",
-        "webContentLink": "https://drive.google.com/uc?id=1CIRH-X8ScLQs_RToZioQOLU6JkL-ZX6J&export=download"
+        "mime": "application/pdf",
+        "drive_id": "1CIRH-X8ScLQs_RToZioQOLU6JkL-ZX6J",
+        "link": "https://drive.google.com/file/d/1CIRH-X8ScLQs_RToZioQOLU6JkL-ZX6J/view?usp=drivesdk"
       },
       {
-        "id": "1LRSMgpc29uNIaW6h0nHV1uR004eczLUO",
         "name": "Ementa_Tecnicas_de_Analise_de_Dados.pdf",
-        "mimeType": "application/pdf",
-        "webViewLink": "https://drive.google.com/file/d/1LRSMgpc29uNIaW6h0nHV1uR004eczLUO/view?usp=drivesdk",
-        "webContentLink": "https://drive.google.com/uc?id=1LRSMgpc29uNIaW6h0nHV1uR004eczLUO&export=download"
+        "mime": "application/pdf",
+        "drive_id": "1LRSMgpc29uNIaW6h0nHV1uR004eczLUO",
+        "link": "https://drive.google.com/file/d/1LRSMgpc29uNIaW6h0nHV1uR004eczLUO/view?usp=drivesdk"
       },
       {
-        "id": "1SNS06jXcfX1CSWme-8TLbG2x0EPyl5jq",
         "name": "cronograma.pdf",
-        "mimeType": "application/pdf",
-        "webViewLink": "https://drive.google.com/file/d/1SNS06jXcfX1CSWme-8TLbG2x0EPyl5jq/view?usp=drivesdk",
-        "webContentLink": "https://drive.google.com/uc?id=1SNS06jXcfX1CSWme-8TLbG2x0EPyl5jq&export=download"
+        "mime": "application/pdf",
+        "drive_id": "1SNS06jXcfX1CSWme-8TLbG2x0EPyl5jq",
+        "link": "https://drive.google.com/file/d/1SNS06jXcfX1CSWme-8TLbG2x0EPyl5jq/view?usp=drivesdk"
+      }
+    ]
+  },
+  "1sXLGGbf_cvBIA5BBhxNte0dcYIn90AXA": {
+    "store_name": "Monster Hunter Wilds",
+    "files": [
+      {
+        "name": "Tutorial Gunlancer.mp4",
+        "mime": "video/mp4",
+        "drive_id": "1o-PiWG4RFMpRTzmyHbgs62b9KEkCyrQw",
+        "link": "https://drive.google.com/file/d/1o-PiWG4RFMpRTzmyHbgs62b9KEkCyrQw/view?usp=drivesdk"
       }
     ]
   }
