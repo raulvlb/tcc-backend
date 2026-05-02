@@ -16,3 +16,17 @@ app.add_middleware(
 )
 
 app.include_router(store_router, prefix="/store", tags=["Store"])
+
+
+@app.get("/")
+def root():
+    return {
+        "status": "ok",
+        "docs": "/docs",
+        "openapi": "/openapi.json",
+        "endpoints": {
+            "stores": "/store/listar",
+            "indexar": "/store/indexar",
+            "chat": "/store/chat",
+        },
+    }
