@@ -29,6 +29,7 @@ INDEX_DIR = "indexes"          # pasta onde ficam os vetores (.pkl por store)
 EMBEDDING_MODEL = "gemini-embedding-2-preview"
 GENERATION_MODEL = "gemini-2.5-flash"
 TOP_K = 3                      # quantos arquivos mais similares usar no contexto
+MIN_SIMILARITY = float(os.getenv("MIN_SIMILARITY", "0.25"))  # limiar p/ considerar que há material relevante
 
 # Tipos suportados diretamente pelo embed_content via Part.from_bytes
 MIME_SUPORTADOS = {
@@ -307,6 +308,19 @@ def _remover_bloco_referencias(texto: str) -> str:
     return "\n".join(trimmed)
 
 
+def _limpar_texto_historico(texto: str) -> str:
+    """Remove URLs e bloco de Referência(s) do histórico para evitar vazamento."""
+    if not texto:
+        return texto
+    texto = _remover_bloco_referencias(texto)
+    # Remove URLs para não induzir o modelo a repetir refs antigas
+    texto = re.sub(r"https?://\S+", "", texto)
+    # Normaliza múltiplos espaços/linhas
+    texto = re.sub(r"[ \t]+", " ", texto)
+    texto = re.sub(r"\n{3,}", "\n\n", texto)
+    return texto.strip()
+
+
 # ── Core: embedding ───────────────────────────────────────────────────────────
 
 def _gerar_embedding(gemini, dados: bytes, mime: str) -> list[float]:
@@ -327,15 +341,31 @@ def _gerar_embedding_texto(gemini, texto: str) -> list[float]:
     return result.embeddings[0].values
 
 
-def _buscar_similares(query_emb: list[float], index: list[dict], top_k: int = TOP_K) -> list[dict]:
-    """Retorna os top_k itens mais similares ao vetor de query."""
+def _buscar_similares(
+    query_emb: list[float],
+    index: list[dict],
+    top_k: int = TOP_K,
+    min_score: float | None = None,
+) -> list[dict]:
+    """Retorna os top_k itens mais similares ao vetor de query.
+
+    Se min_score for informado, filtra resultados com score < min_score.
+    """
     if not index:
         return []
     embs = np.array([item["embedding"] for item in index], dtype=np.float32)
     q = np.array([query_emb], dtype=np.float32)
     scores = cosine_similarity(q, embs)[0]
     top_indices = np.argsort(scores)[::-1][:top_k]
-    return [index[i] for i in top_indices]
+    resultados: list[dict] = []
+    for i in top_indices:
+        score = float(scores[i])
+        if min_score is not None and score < min_score:
+            continue
+        item = dict(index[i])
+        item["_score"] = score
+        resultados.append(item)
+    return resultados
 
 
 # ── Rota: /indexar ────────────────────────────────────────────────────────────
@@ -541,7 +571,7 @@ def chat(body: ChatRequest):
         query_emb = _gerar_embedding_texto(gemini, body.prompt)
 
         # ── 2. Busca semântica ───────────────────────────────────────────────
-        top_itens = _buscar_similares(query_emb, index, top_k=TOP_K)
+        top_itens = _buscar_similares(query_emb, index, top_k=TOP_K, min_score=MIN_SIMILARITY)
 
         # ── 3. Re-baixa arquivos relevantes e monta partes de contexto ───────
         partes_contexto: list = []
@@ -577,21 +607,33 @@ def chat(body: ChatRequest):
             historico_texto = "\n\nHistórico da conversa:\n"
             for msg in body.historico[-6:]:
                 papel = "Aluno" if msg.role == "user" else "Assistente"
-                historico_texto += f"{papel}: {msg.content}\n"
+                conteudo = _limpar_texto_historico(msg.content)
+                if conteudo:
+                    historico_texto += f"{papel}: {conteudo}\n"
 
         # ── 5. Monta prompt final ────────────────────────────────────────────
-        nomes_contexto = ", ".join(i["name"] for i in top_itens)
+        tem_materiais = len(partes_contexto) > 0
+        if tem_materiais:
+            nomes_contexto = ", ".join(i["name"] for i in top_itens)
+            regra_contexto = f"- Os materiais acima são os mais relevantes para a pergunta ({nomes_contexto})"
+            regra_refs = (
+                "- Ao usar material: adicione uma linha em branco e inclua ao final:\n"
+                "  - 1 fonte: \"Referência: <URL do Drive>\"\n"
+                "  - N fontes: \"Referências:\\n1) <URL>\\n2) <URL>\""
+            )
+        else:
+            regra_contexto = "- Não foram encontrados materiais relevantes nas suas stores para esta pergunta"
+            regra_refs = "- Não inclua seção de Referência(s) e não liste URLs de fontes"
+
         system_prompt = f"""Assistente acadêmico. Responda em português brasileiro.
 
 REGRAS:
 - Responda direto, sem saudações ou formalidades
-- Os materiais acima são os mais relevantes para a pergunta ({nomes_contexto})
-- Use esses materiais como base principal; se não for suficiente, use seu conhecimento e informe
-- Pode reformatar/resumir materiais
+{regra_contexto}
+- Se não houver material suficiente, use seu conhecimento e informe que não usou a store
+- Pode reformatar/resumir materiais quando existirem
 - Use markdown e emojis (tom profissional)
-- Ao usar material: adicione uma linha em branco e inclua ao final:
-  - 1 fonte: "Referência: <URL do Drive>"
-  - N fontes: "Referências:\\n1) <URL>\\n2) <URL>"
+{regra_refs}
 {historico_texto}
 Pergunta: {body.prompt}"""
 
@@ -610,18 +652,22 @@ Pergunta: {body.prompt}"""
 
         # ── 7. Pós-processamento de referências ──────────────────────────────
         resposta_final = response.text or ""
-        resposta_final = _substituir_referencias(resposta_final, index)
-        refs = _extrair_referencias(resposta_final)
-        if not refs:
-            refs = referencias  # fallback: links dos arquivos usados no contexto
+        refs: list[str] = []
+        if tem_materiais:
+            resposta_final = _substituir_referencias(resposta_final, index)
+            # Só retorna referências se o modelo realmente citou fontes na resposta
+            extraidas = _extrair_referencias(resposta_final)
+            # Filtra para apenas URLs dos materiais realmente carregados nesta resposta
+            permitidas = set(referencias)
+            refs = [u for u in extraidas if u in permitidas]
+        # Sempre remove bloco de referências do texto final
         resposta_final = (_remover_bloco_referencias(resposta_final) or "").strip()
-
+        print(refs)
         return ChatResponse(
             status="success",
             resposta=resposta_final,
             referencias=refs,
         )
-
     except HTTPException:
         raise
     except Exception as e:
